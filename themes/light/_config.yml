@@ -15,12 +15,12 @@ twitter:
   tweet_count: 5
 
 addthis:
-  enable: true
+  enable: false
   pubid:
-  facebook: true
-  twitter: true
-  google: true
-  pinterest: true
+  facebook: false
+  twitter: false
+  google: false
+  pinterest: false
 
 fancybox: true
 
@@ -30,7 +30,7 @@ rss:
 comment_provider: facebook
 # Facebook comment
 facebook:
-  appid: 123456789012345
+  appid: 1402715196443381
   comment_count: 5
   comment_width: 840
   comment_colorscheme: light
