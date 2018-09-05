@@ -1,112 +1,67 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>Instal Phalcon di Windows | Catatan Sang Programmer</title>
+  <meta name="author" content="Buqento Richard">
+  
+  <meta name="description" content="Instal file dllUntuk menggunakan phalcon pada windows, perlu menginstal phalcon.dll. DLL file dapat di unduh pada link berikut: phalcon
+Periksa versi dan arsitekturAnda dapat memeriksa versi dan arsitektur PHP melalui phpinfo() agar tidak mengunduh DLL yang salah. Saya menggunakan PHP versi 7.2.3 dengan arsitektur x86, maka yang harus saya unduh adalah ekstrak dan salin file dll tersebut ke direktori.
+1C:\xampp\php\ext">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Instal file dllUntuk menggunakan phalcon pada windows, perlu menginstal phalcon.dll. DLL file dapat di unduh pada link berikut: phalcon Periksa versi dan arsitekturAnda dapat memeriksa versi dan arsit">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Instal Phalcon di Windows">
-<meta property="og:url" content="http://buqento.com/2018/09/01/Instal-Phalcon-di-Windows/index.html">
-<meta property="og:site_name" content="Catatan Sang Programmer">
-<meta property="og:description" content="Instal file dllUntuk menggunakan phalcon pada windows, perlu menginstal phalcon.dll. DLL file dapat di unduh pada link berikut: phalcon Periksa versi dan arsitekturAnda dapat memeriksa versi dan arsit">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-02T09:37:57.095Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Instal Phalcon di Windows">
-<meta name="twitter:description" content="Instal file dllUntuk menggunakan phalcon pada windows, perlu menginstal phalcon.dll. DLL file dapat di unduh pada link berikut: phalcon Periksa versi dan arsitekturAnda dapat memeriksa versi dan arsit">
+
+  <meta property="og:title" content="Instal Phalcon di Windows"/>
+  <meta property="og:site_name" content="Catatan Sang Programmer"/>
+
   
-    <link rel="alternate" href="/atom.xml" title="Catatan Sang Programmer" type="application/atom+xml">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <meta property="og:image" content=""/>
   
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="/css/styles.css">
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Catatan Sang Programmer" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 
 </head>
 
+
 <body>
-  <nav class="navbar navbar-inverse">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="main-menu-navbar">
-      <ul class="nav navbar-nav">
-        
-          <li><a class=""
-                 href="/index.html">Home</a></li>
-        
-          <li><a class=""
-                 href="/archives/">Archives</a></li>
-        
-      </ul>
-
-      <!--
-      <ul class="nav navbar-nav navbar-right">
-        
-          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
-        
-      </ul>
-      -->
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Catatan Sang Programmer</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
 </nav>
-
-  <div class="container">
-    <div class="blog-header">
-  <h1 class="blog-title">Catatan Sang Programmer</h1>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
-</div>
-
-    <div class="row">
-        <div class="col-sm-8 blog-main">
-          <article id="post-Instal-Phalcon-di-Windows" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
-    
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-09-01T01:22:32.000Z"><a href="/2018/09/01/Instal-Phalcon-di-Windows/">2018-09-01</a></time>
+      
+      
   
-    <h1 class="article-title" itemprop="name">
-      Instal Phalcon di Windows
-    </h1>
+    <h1 class="title">Instal Phalcon di Windows</h1>
   
 
-
-  </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/2018/09/01/Instal-Phalcon-di-Windows/" class="article-date"><time datetime="2018-09-01T01:22:32.000Z" itemprop="datePublished">2018-09-01</time></a>
-</div>
-
-    
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Phalcon/">Phalcon</a>
-  </div>
-
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
+    </header>
+    <div class="entry">
       
         <h2 id="Instal-file-dll"><a href="#Instal-file-dll" class="headerlink" title="Instal file dll"></a>Instal file dll</h2><p>Untuk menggunakan phalcon pada windows, perlu menginstal phalcon.dll. DLL file dapat di unduh pada link berikut: <a href="https://phalconphp.com/en/download/windows" target="_blank" rel="noopener">phalcon</a></p>
 <h2 id="Periksa-versi-dan-arsitektur"><a href="#Periksa-versi-dan-arsitektur" class="headerlink" title="Periksa versi dan arsitektur"></a>Periksa versi dan arsitektur</h2><p>Anda dapat memeriksa versi dan arsitektur PHP melalui phpinfo() agar tidak mengunduh DLL yang salah. Saya menggunakan PHP versi 7.2.3 dengan arsitektur x86, maka yang harus saya unduh adalah ekstrak dan salin file dll tersebut ke direktori.</p>
@@ -117,184 +72,110 @@
 <div class="video-container"><iframe src="//www.youtube.com/embed/75W-emM4wNQ" frameborder="0" allowfullscreen></iframe></div>
       
     </div>
-
-    
+    <footer>
       
+        
+  
+  <div class="categories">
+    <a href="/categories/Phalcon/">Phalcon</a>
+  </div>
 
-    
-
-    <footer class="article-footer">
-      <a data-url="http://buqento.com/2018/09/01/Instal-Phalcon-di-Windows/" data-id="cjloidxfh00008sv35nk0a4qm" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
+        
+        
       
-        <a href="http://buqento.com/2018/09/01/Instal-Phalcon-di-Windows/#disqus_thread" class="article-comment-link">
-          <i class="fa fa-comment"></i> Comments
-        </a>
-      
-      
-
+      <div class="clearfix"></div>
     </footer>
   </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/2010/09/19/simple-webpage/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Simple Webpage</span>
-    </a>
-  </li>
-  
-  
-  <li role="presentation">
-    <a href="/2018/09/01/instal-xampp-di-windows/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">Instal XAMPP di Windows</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
-  
-</ul>
-
-
-  
 </article>
 
 
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1402715196443381";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://buqento.com/2018/09/01/Instal-Phalcon-di-Windows/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
 </section>
 
-
-
-        </div>
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
-  <div class="sidebar-module sidebar-module-inset">
-  <h4>About</h4>
-  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/NodeJS/">NodeJS</a><small>1</small></li>
+  
+    <li><a href="/categories/PHP/">PHP</a><small>2</small></li>
+  
+    <li><a href="/categories/Phalcon/">Phalcon</a><small>1</small></li>
+  
+    <li><a href="/categories/Yii-Framework/">Yii Framework</a><small>1</small></li>
+  
+  </ul>
 </div>
 
 
   
-  <div class="sidebar-module">
-    <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/NodeJS/">NodeJS</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/PHP/">PHP</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Phalcon/">Phalcon</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Yii-Framework/">Yii Framework</a><span class="sidebar-module-list-count">1</span></li></ul>
-  </div>
-
-
-
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
   
-  <div class="sidebar-module">
-    <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/PHP/">PHP</a><span class="sidebar-module-list-count">1</span></li></ul>
-  </div>
-
-
-
+    <li><a href="/tags/PHP/">PHP</a><small>1</small></li>
   
-  <div class="sidebar-module">
-    <h4>Tag Cloud</h4>
-    <p class="tagcloud">
-      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a>
-    </p>
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
   </div>
-
-
-  
-  <div class="sidebar-module">
-    <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/09/">September 2018</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
-  </div>
-
-
-
-  
-  <div class="sidebar-module">
-    <h4>Recents</h4>
-    <ul class="sidebar-module-list">
-      
-        <li>
-          <a href="/2018/09/04/generate-fresh-hexo-for-your-blog/">Generate fresh Hexo for your blog</a>
-        </li>
-      
-        <li>
-          <a href="/2018/09/03/how-to-login-user-from-a-database/">How to login user from a database</a>
-        </li>
-      
-        <li>
-          <a href="/2018/09/01/instal-xampp-di-windows/">Instal XAMPP di Windows</a>
-        </li>
-      
-        <li>
-          <a href="/2018/09/01/Instal-Phalcon-di-Windows/">Instal Phalcon di Windows</a>
-        </li>
-      
-        <li>
-          <a href="/2010/09/19/simple-webpage/">Simple Webpage</a>
-        </li>
-      
-    </ul>
-  </div>
-
-
-
-        </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Buqento Richard<br>
+      powered_by <a href="https://www.buqento.com" target="_blank">Buqento Richard</a>
     </div>
   </div>
-  
-  <script>
-    var disqus_shortname = 'buqento';
-    
-    var disqus_url = 'http://buqento.com/2018/09/04/generate-fresh-hexo-for-your-blog/';
-    
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//go.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
-  <footer class="blog-footer">
-    <div class="container">
-      <div id="footer-info" class="inner">
-        &copy; 2018 Buqento Richard<br>
-        powered_by <a href="https://www.buqento.com" target="_blank">Buqento Richard</a>
-      </div>
-    </div>
-  </footer>
-             
-<div id="disqus_thread"></div>
-  
-<script>
-  var disqus_shortname = 'buqento';
-  
-  var disqus_url = 'http://buqento.com/2018/09/01/Instal-Phalcon-di-Windows/';
-  
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
+
+<script type="text/javascript">
+var disqus_shortname = 'buqento';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
 </script>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-
-<script src="/js/script.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
 </body>
 </html>
