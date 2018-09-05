@@ -1,150 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html>
 <head>
+  <meta charset="utf-8">
+  
+  <title>How to login user from a database | Catatan Sang Programmer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This tutorial explains how to make login functionality with users coming from database. Login functionality is one of the most important parts of every application.  Create table12345678CREATE TABLE `">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to login user from a database">
+<meta property="og:url" content="http://buqento.com/2018/09/03/how-to-login-user-from-a-database/index.html">
+<meta property="og:site_name" content="Catatan Sang Programmer">
+<meta property="og:description" content="This tutorial explains how to make login functionality with users coming from database. Login functionality is one of the most important parts of every application.  Create table12345678CREATE TABLE `">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://buqento.com/2018/09/03/how-to-login-user-from-a-database/model.png">
+<meta property="og:updated_time" content="2018-09-05T02:12:35.438Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to login user from a database">
+<meta name="twitter:description" content="This tutorial explains how to make login functionality with users coming from database. Login functionality is one of the most important parts of every application.  Create table12345678CREATE TABLE `">
+<meta name="twitter:image" content="http://buqento.com/2018/09/03/how-to-login-user-from-a-database/model.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Catatan Sang Programmer" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <!--Description-->
-    
-        <meta name="description" content="This tutorial explains how to make login functionality with users coming from database. Login functionality is one of the most important parts of every application. 
-Create table12345678CREATE TABLE `user_admin` (  `id` int(10) UNSIGNED NOT NULL,  `first_name` varchar(15) DEFAULT NULL,  `last_name` varchar(20) DEFAULT NULL,  `username` varchar(30) DEFAULT NULL,  `password` varchar(30) DEFAULT NULL,  `auth_key` char(50) DEFAULT NULL)">
-    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
 
-    <!--Author-->
-    
-        <meta name="author" content="Buqento Richard">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="How to login user from a database"/>
-    
-
-    <!--Open Graph Description-->
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Catatan Sang Programmer"/>
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="article" />
-    
-
-    <!--Page Cover-->
-    
-
-    <meta name="twitter:card" content="summary" />
-    
-
-    <!-- Title -->
-    
-    <title>How to login user from a database - Catatan Sang Programmer</title>
-
-    <!-- Tachyons Core CSS -->
-    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Google Analytics -->
-    
-
+  <link rel="stylesheet" href="/css/styles.css">
+  
 
 </head>
 
-
 <body>
-
-<!-- Main Content -->
-<!-- Banner -->
-<!-- Banner -->
-<div class="w-100 bg-1 ph5-ns ph3 text-light">
-    
-    <nav class="db dt-l w-100 mw8 center border-box pv3">
-        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Catatan Sang Programmer">
-            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Catatan Sang Programmer">
-        </a>
-        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/" 
-                    title="Home">
-                    Home
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/archives" 
-                    title="Archives">
-                    Archives
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/tags" 
-                    title="Tags">
-                    Tags
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/categories" 
-                    title="Categories">
-                    Categories
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/about.html" 
-                    title="About">
-                    About
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/contact.html" 
-                    title="Contact">
-                    Contact
-                </a>
-            
-        </div>
-    </nav>
-
-    <!-- Title -->
-    <div class="w-100 mw8 center vh-40 dt">
-        <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">How to login user from a database</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-09-03</p>
-        </div>
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
     </div>
 
-    <!-- Icon -->
-    <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa-file-text-o"></i>
-    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          <li><a class=""
+                 href="/index.html">Home</a></li>
+        
+          <li><a class=""
+                 href="/archives/">Archives</a></li>
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header">
+  <h1 class="blog-title">Catatan Sang Programmer</h1>
+  
 </div>
 
-<!-- Content -->
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-    <div class="content">
-        <div class="mw8 center">
-            <div class="cf">
-                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
-                    <!-- Tags Vertical -->
-                    
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+          <article id="post-how-to-login-user-from-a-database" class="article article-type-post" itemscope itemprop="blogPost">
 
-                    <!-- Main Post Content -->
-                    <p>This tutorial explains how to make login functionality with users coming from database. Login functionality is one of the most important parts of every application. </p>
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      How to login user from a database
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2018/09/03/how-to-login-user-from-a-database/" class="article-date"><time datetime="2018-09-03T09:09:59.000Z" itemprop="datePublished">2018-09-03</time></a>
+</div>
+
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Yii-Framework/">Yii Framework</a>
+  </div>
+
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This tutorial explains how to make login functionality with users coming from database. Login functionality is one of the most important parts of every application. </p>
 <h2 id="Create-table"><a href="#Create-table" class="headerlink" title="Create table"></a>Create table</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `user_admin` (</span><br><span class="line">  `id` int(10) UNSIGNED NOT NULL,</span><br><span class="line">  `first_name` varchar(15) DEFAULT NULL,</span><br><span class="line">  `last_name` varchar(20) DEFAULT NULL,</span><br><span class="line">  `username` varchar(30) DEFAULT NULL,</span><br><span class="line">  `password` varchar(30) DEFAULT NULL,</span><br><span class="line">  `auth_key` char(50) DEFAULT NULL</span><br><span class="line">) </span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h2 id="Generate-Model"><a href="#Generate-Model" class="headerlink" title="Generate Model"></a>Generate Model</h2><p>Next step is generate model with GII</p>
@@ -156,170 +122,186 @@ Create table12345678CREATE TABLE `user_admin` (  `id` int(10) UNSIGNED NOT NULL,
 <h2 id="Configure-component"><a href="#Configure-component" class="headerlink" title="Configure component"></a>Configure component</h2><p>Keep in mind to modify in the config path the \config\web.php file.</p>
 <figure class="highlight php"><figcaption><span>web.php</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'user'</span> =&gt; [</span><br><span class="line">    <span class="string">'identityClass'</span> =&gt; <span class="string">'app\models\UserAdmin'</span>,</span><br><span class="line">    <span class="string">'enableAutoLogin'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">    <span class="string">'enableSession'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
 <h2 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h2><div class="video-container"><iframe src="//www.youtube.com/embed/O7oEl7TUqtA" frameborder="0" allowfullscreen></iframe></div>
-                    
-                    <!-- Tags Bottom -->
-                    
+      
+    </div>
 
-                    <!-- Comments -->
-                    
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://buqento.com/2018/09/03/how-to-login-user-from-a-database/" data-id="cjloyt4hd0001vkv31enjp5nd" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+        <a href="http://buqento.com/2018/09/03/how-to-login-user-from-a-database/#disqus_thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+      
+      
+
+    </footer>
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2018/09/01/instal-xampp-di-windows/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Instal XAMPP di Windows</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2018/09/04/generate-fresh-hexo-for-your-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Generate fresh Hexo for your blog</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 
 
-                </div>
-                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
-                    
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 1: About -->
-                    <div class="mt5 mt0-l">
-    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
-        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
-            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Buqento Richard">
         </div>
-        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
-            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
-        </div>
-    </article>
-</div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          
+  <div class="sidebar-module sidebar-module-inset">
+  <h4>About</h4>
+  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
 
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 2: Categories -->
-                    
-                        <div class="mt5 tc tl-l">
-    <h3>Categories</h3>
-    
-        <p>
-            <a href="/categories/Yii-Framework/">Yii Framework</a>
-        </p>
-    
 </div>
 
 
-                        <hr class="dn-l mw4 black-50 mt5" />
-                    
+  
+  <div class="sidebar-module">
+    <h4>Categories</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/NodeJS/">NodeJS</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/PHP/">PHP</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Phalcon/">Phalcon</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Yii-Framework/">Yii Framework</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
 
-                    <!-- Widget 3: Recent Posts -->
-                    <div class="mt5 tc tl-l">
-    <h3>Recent Posts</h3>
-    
-        <p>
-            <a href="/2018/09/04/generate-fresh-hexo-for-your-blog/">Generate fresh Hexo for your blog</a>
-        </p>
-    
-        <p>
-            <a href="/2018/09/03/how-to-login-user-from-a-database/">How to login user from a database</a>
-        </p>
-    
-        <p>
-            <a href="/2018/09/01/instal-xampp-di-windows/">Instal XAMPP di Windows</a>
-        </p>
-    
-        <p>
-            <a href="/2018/09/01/Instal-Phalcon-di-Windows/">Instal Phalcon di Windows</a>
-        </p>
-    
-        <p>
-            <a href="/2010/09/19/simple-webpage/">Simple Webpage</a>
-        </p>
-    
-</div>
-                </div>
-            </div>
+
+
+  
+  <div class="sidebar-module">
+    <h4>Tags</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/PHP/">PHP</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>Tag Cloud</h4>
+    <p class="tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a>
+    </p>
+  </div>
+
+
+  
+  <div class="sidebar-module">
+    <h4>Archives</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/09/">September 2018</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>Recents</h4>
+    <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2018/09/04/generate-fresh-hexo-for-your-blog/">Generate fresh Hexo for your blog</a>
+        </li>
+      
+        <li>
+          <a href="/2018/09/03/how-to-login-user-from-a-database/">How to login user from a database</a>
+        </li>
+      
+        <li>
+          <a href="/2018/09/01/instal-xampp-di-windows/">Instal XAMPP di Windows</a>
+        </li>
+      
+        <li>
+          <a href="/2018/09/01/Instal-Phalcon-di-Windows/">Instal Phalcon di Windows</a>
+        </li>
+      
+        <li>
+          <a href="/2010/09/19/simple-webpage/">Simple Webpage</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
         </div>
     </div>
-</div>
+  </div>
+  
+  <script>
+    var disqus_shortname = 'buqento';
+    
+    var disqus_url = 'http://buqento.com/2018/09/04/generate-fresh-hexo-for-your-blog/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//go.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  
+
+  <footer class="blog-footer">
+    <div class="container">
+      <div id="footer-info" class="inner">
+        &copy; 2018 Buqento Richard<br>
+        powered_by <a href="https://www.buqento.com" target="_blank">Buqento Richard</a>
+      </div>
+    </div>
+  </footer>
+             
+<div id="disqus_thread"></div>
+  
+<script>
+  var disqus_shortname = 'buqento';
+  
+  var disqus_url = 'http://buqento.com/2018/09/03/how-to-login-user-from-a-database/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
 
-<!-- Footer -->
-        
-            <script>
-            var disqus_shortname = 'buqento';
-            
-            var disqus_url = 'http://buqento.com/2018/09/03/how-to-login-user-from-a-database/';
-            
-            (function(){
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//go.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-            </script>
-        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
 
-        <div class="bg-1 ph2 ph5-ns pv5">
-            <div class="mv8">
-                <div class="center tc">
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </div>
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </div>
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
-                                <i class="fa fa-dribbble"></i>
-                            </a>
-                        </div>
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="https://github.com/klugjo/hexo-theme-anodyne" target="_blank">
-                                <i class="fa fa-github"></i>
-                            </a>
-                        </div>
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </div>
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
-                                <i class="fa fa-behance"></i>
-                            </a>
-                        </div>
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
-                                <i class="fa fa-500px"></i>
-                            </a>
-                        </div>
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="mailto:test@example.com" target="_blank">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </div>
-                    
-                        <div class="dib mh3">
-                            <a class="f3 f2-ns white dim" href="/#" target="_blank">
-                                <i class="fa fa-rss"></i>
-                            </a>
-                        </div>
-                    
-                </div>
-                <div class="f6 f5-ns center tc white pt5 fw3">
-                    All right reserved | <a class="link dim white" href="https://www.buqento.com/">Buqento Richard</a>
-                </div>
-            </div>
-        </div>    
-                   
-      <div id="disqus_thread"></div>
-
-<!-- After Footer -->
-<!-- Disqus Comments -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
+
+<script src="/js/script.js"></script>
 
 </body>
-
 </html>
