@@ -18,7 +18,7 @@ C:\xampp\htdocs\hexobase>hexo init
 C:\xampp\htdocs\hexobase>hexo generate
 C:\xampp\htdocs\hexobase>hexo server
 ```
-
+<!-- more -->
 ### Create a new post
 
 ``` bash

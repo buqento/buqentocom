@@ -20,7 +20,7 @@ CREATE TABLE `user_admin` (
 ) 
 {% endcodeblock %}
 
-
+<!-- more -->
 ## Generate Model
 
 Next step is generate model with GII
