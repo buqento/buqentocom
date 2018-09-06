@@ -4,9 +4,13 @@ date: 2018-09-05 17:07:54
 tags: [web]
 categories: [Phalcon]
 ---
+{% blockquote %}
+A full-stack PHP framework delivered as a C-extension.
+{% endblockquote %}
 
-A full-stack PHP framework delivered as a C-extension. Judul utama saat berkunjung ke [phalconphp.com] (https://phalconphp.com/en/). Phalcon merupakan framework PHP yang menggunakan C-extention, membuatnya sangat ringan dan cepat. 
+Kalimat pertama saat berkunjung ke {% link phalconphp.com https://phalconphp.com/en/ %}. Phalcon merupakan framework PHP yang menggunakan C-extention, membuatnya sangat ringan dan cepat. 
 <!-- more -->
+
 ## Instal file dll
 Langkah pertama yang yang mestinya dilakukan untuk menggunakan phalcon pada windows adalah dengan menginstal phalcon.dll. DLL file tersebut dapat di unduh melalui [phalcon](https://phalconphp.com/en/download/windows)
 
