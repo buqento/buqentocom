@@ -1,7 +1,7 @@
 ---
 title: How to login user from a database
 date: 2018-09-03 16:09:59
-tags:
+tags: [web]
 categories: [Yii Framework]
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: membuat blog menggunakan hexo framework
 date: 2018-09-05 17:56:41
-tags: web
-categories: NodeJS
+tags: [web]
+categories: [NodeJS]
 ---
 
 Hexo adalah salah satu blog framework yang handal. Hexo sangatlah simpel dan powerful. Dengan Hexo, anda cukup menulis postingan menggunakan Markdown. Markdown adalah sebuah tool yang mengubah text-to-HTML. Dokumentasi Hexo lebih lengkap [Hexo](https://hexo.io/).
