@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://buqento.com/"/>
-  <updated>2018-09-06T00:48:53.083Z</updated>
+  <updated>2018-09-07T02:11:09.598Z</updated>
   <id>http://buqento.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>instal yii 2.0</title>
+    <link href="http://buqento.com/2018/09/07/instal-yii-2-0/"/>
+    <id>http://buqento.com/2018/09/07/instal-yii-2-0/</id>
+    <published>2018-09-07T01:33:16.000Z</published>
+    <updated>2018-09-07T02:11:09.598Z</updated>
+    
+    <content type="html"><![CDATA[<p>Anda dapat menginstal Yii dengan dua cara, menggunakan manajer paket Composer atau dengan mengunduh file arsip. Yang pertama adalah cara yang lebih disukai, karena memungkinkan Anda untuk menginstal ekstensi baru atau memperbarui Yii hanya dengan menjalankan satu perintah.</p><h2 id="Instal-menggunakan-Composer"><a href="#Instal-menggunakan-Composer" class="headerlink" title="Instal menggunakan Composer"></a>Instal menggunakan Composer</h2><p>Untuk server windows anda dapat mengunduh dan menginstal composer melalui <a href="https://getcomposer.org/" target="_blank" rel="noopener">getcomposer.org</a></p><p>Selanjutnya jalankan perintah berikut melalui command prompt:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project --prefer-dist yiisoft/yii2-app-basic yiibaseapp</span><br></pre></td></tr></table></figure><h2 id="Jalankan-web-server"><a href="#Jalankan-web-server" class="headerlink" title="Jalankan web server"></a>Jalankan web server</h2><p>Pastikan anda telah menginstal apache service pada komputer. Saya menggunakan XAMPP yang dapat di unduh di <a href="www.apachefriends.org" title="https://www.apachefriends.org/download.html"></a></p><h2 id="Buka-browser"><a href="#Buka-browser" class="headerlink" title="Buka browser"></a>Buka browser</h2><p>Jalankan browser dan lihat hasilnya melalui link berikut:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/yiibaseapp/web/</span><br></pre></td></tr></table></figure><h2 id="Tonton-video-lengkap"><a href="#Tonton-video-lengkap" class="headerlink" title="Tonton video lengkap"></a>Tonton video lengkap</h2><div class="video-container"><iframe src="//www.youtube.com/embed/https://youtu.be/SXQ19XYZYkg" frameborder="0" allowfullscreen></iframe></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Anda dapat menginstal Yii dengan dua cara, menggunakan manajer paket Composer atau dengan mengunduh file arsip. Yang pertama adalah cara 
+      
+    
+    </summary>
+    
+      <category term="Yii 2.0" scheme="http://buqento.com/categories/Yii-2-0/"/>
+    
+    
+      <category term="web" scheme="http://buqento.com/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>yii framework 2 login user dengan database</title>
@@ -68,13 +93,13 @@
     <link href="http://buqento.com/2018/09/05/langkah-cepat-menginstal-phalcon-framework/"/>
     <id>http://buqento.com/2018/09/05/langkah-cepat-menginstal-phalcon-framework/</id>
     <published>2018-09-05T10:07:54.000Z</published>
-    <updated>2018-09-05T10:59:18.802Z</updated>
+    <updated>2018-09-06T01:41:24.260Z</updated>
     
-    <content type="html"><![CDATA[<p>A full-stack PHP framework delivered as a C-extension. Judul utama saat berkunjung ke [phalconphp.com] (<a href="https://phalconphp.com/en/)" target="_blank" rel="noopener">https://phalconphp.com/en/)</a>. Phalcon merupakan framework PHP yang menggunakan C-extention, membuatnya sangat ringan dan cepat.<br><a id="more"></a></p><h2 id="Instal-file-dll"><a href="#Instal-file-dll" class="headerlink" title="Instal file dll"></a>Instal file dll</h2><p>Langkah pertama yang yang mestinya dilakukan untuk menggunakan phalcon pada windows adalah dengan menginstal phalcon.dll. DLL file tersebut dapat di unduh melalui <a href="https://phalconphp.com/en/download/windows" target="_blank" rel="noopener">phalcon</a></p><h2 id="Periksa-versi-dan-arsitektur"><a href="#Periksa-versi-dan-arsitektur" class="headerlink" title="Periksa versi dan arsitektur"></a>Periksa versi dan arsitektur</h2><p>Selanjutnya anda dapat memeriksa versi dan arsitektur PHP melalui phpinfo() agar tidak mengunduh DLL yang salah. </p><img src="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/arsitektur.png" title="Versi dan arsitektur"><p>Pada gambar di atas, terlihat bahwa komputer yang saya pakai menggunakan PHP versi 7.2.3 dengan arsitektur x86. Oleh karena itu, yang harus saya unduh adalah: </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">phalcon_x86_vc15_php7.2_3.4.1-1751.zip</span><br></pre></td></tr></table></figure><p>Setelah diunduh, ekstrak dan salin file dll tersebut ke direktori.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\xampp\php\ext</span><br></pre></td></tr></table></figure><img src="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/ekstrak.png" title="Lokasi ekstrak file dll"><h2 id="Konfigurasi-PHP-ini"><a href="#Konfigurasi-PHP-ini" class="headerlink" title="Konfigurasi PHP.ini"></a>Konfigurasi PHP.ini</h2><p>Lakukan konfigurasi dengan menambahkan statemen pada file PHP.ini (C:\xampp\php).<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extension=php_phalcon.dll</span><br></pre></td></tr></table></figure></p><img src="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/change.png" title="Konfigurasi ekstention PHP.ini"><h2 id="Restart-webserver"><a href="#Restart-webserver" class="headerlink" title="Restart webserver"></a>Restart webserver</h2><p>Restart server anda untuk memastikan apakah telah berhasil menginstal phalcon pada server. Untuk melihat hasilnya, periksa pada phpinfo().</p><img src="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/berhasil.png" title="Tampilan phpinfo">]]></content>
+    <content type="html"><![CDATA[<p>“A full-stack PHP framework delivered as a C-extension”. Kalimat pertama saat berkunjung ke <a href="https://phalconphp.com/en/" target="_blank" rel="noopener">phalconphp.com</a>. Phalcon merupakan framework PHP yang menggunakan C-extention, membuatnya sangat ringan dan cepat.<br><a id="more"></a></p><h2 id="Instal-file-dll"><a href="#Instal-file-dll" class="headerlink" title="Instal file dll"></a>Instal file dll</h2><p>Langkah pertama yang yang mestinya dilakukan untuk menggunakan phalcon pada windows adalah dengan menginstal phalcon.dll. DLL file tersebut dapat di unduh melalui <a href="https://phalconphp.com/en/download/windows" target="_blank" rel="noopener">phalcon</a></p><h2 id="Periksa-versi-dan-arsitektur"><a href="#Periksa-versi-dan-arsitektur" class="headerlink" title="Periksa versi dan arsitektur"></a>Periksa versi dan arsitektur</h2><p>Selanjutnya anda dapat memeriksa versi dan arsitektur PHP melalui phpinfo() agar tidak mengunduh DLL yang salah. </p><img src="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/arsitektur.png" title="Versi dan arsitektur"><p>Pada gambar di atas, terlihat bahwa komputer yang saya pakai menggunakan PHP versi 7.2.3 dengan arsitektur x86. Oleh karena itu, yang harus saya unduh adalah: </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">phalcon_x86_vc15_php7.2_3.4.1-1751.zip</span><br></pre></td></tr></table></figure><p>Setelah diunduh, ekstrak dan salin file dll tersebut ke direktori C:\xampp\php\ext</p><img src="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/ekstrak.png" title="Lokasi ekstrak file dll"><h2 id="Konfigurasi-PHP-ini"><a href="#Konfigurasi-PHP-ini" class="headerlink" title="Konfigurasi PHP.ini"></a>Konfigurasi PHP.ini</h2><p>Lakukan konfigurasi dengan menambahkan statemen pada file PHP.ini (C:\xampp\php).</p><img src="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/change.png" title="Konfigurasi ekstention PHP.ini"><h2 id="Restart-webserver"><a href="#Restart-webserver" class="headerlink" title="Restart webserver"></a>Restart webserver</h2><p>Restart server anda untuk memastikan apakah telah berhasil menginstal phalcon pada server. Untuk melihat hasilnya, periksa pada phpinfo().</p><img src="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/berhasil.png" title="Tampilan phpinfo">]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;A full-stack PHP framework delivered as a C-extension. Judul utama saat berkunjung ke [phalconphp.com] (&lt;a href=&quot;https://phalconphp.com/en/)&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://phalconphp.com/en/)&lt;/a&gt;. Phalcon merupakan framework PHP yang menggunakan C-extention, membuatnya sangat ringan dan cepat.&lt;br&gt;
+      &lt;p&gt;“A full-stack PHP framework delivered as a C-extension”. Kalimat pertama saat berkunjung ke &lt;a href=&quot;https://phalconphp.com/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;phalconphp.com&lt;/a&gt;. Phalcon merupakan framework PHP yang menggunakan C-extention, membuatnya sangat ringan dan cepat.&lt;br&gt;
     
     </summary>
     
