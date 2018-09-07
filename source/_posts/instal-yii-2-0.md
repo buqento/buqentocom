@@ -17,7 +17,7 @@ composer create-project --prefer-dist yiisoft/yii2-app-basic yiibaseapp
 {% endcodeblock %}
 <!-- more -->
 ## Jalankan web server
-Pastikan anda telah menginstal apache service pada komputer. Saya menggunakan XAMPP yang dapat di unduh di {% link www.apachefriends.org https://www.apachefriends.org/download.html %}
+Pastikan anda telah menginstal apache service pada komputer. Saya menggunakan XAMPP yang dapat di unduh di {% link apachefriends.org https://www.apachefriends.org/download.html %}
 
 ## Buka browser
 Jalankan browser dan lihat hasilnya melalui link berikut:
