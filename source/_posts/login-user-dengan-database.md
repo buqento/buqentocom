@@ -1,8 +1,8 @@
 ---
-title: yii framework 2 login user dengan database
-date: 2018-09-06 07:28:19
+title: login user dengan database
+date: 2018-09-07 09:21:41
 tags: [web]
-categories: [Yii Framework]
+categories: [Yii 2.0]
 ---
 
 Fungsi login secara umum adalah salah satu bagian terpenting pada setiap aplikasi. Tutorial ini akan menjelaskan langkah-langkah membuat fungsi login dengan menggunakan model user basic yang ada pada yii framework.
