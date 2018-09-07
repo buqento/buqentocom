@@ -2,7 +2,7 @@
 title: instal yii 2.0
 date: 2018-09-07 08:33:16
 tags: [web]
-categories: [Yii 2.0]
+categories: [Yii Framework]
 ---
 
 Anda dapat menginstal Yii dengan dua cara, menggunakan manajer paket Composer atau dengan mengunduh file arsip. Yang pertama adalah cara yang lebih disukai, karena memungkinkan Anda untuk menginstal ekstensi baru atau memperbarui Yii hanya dengan menjalankan satu perintah.
