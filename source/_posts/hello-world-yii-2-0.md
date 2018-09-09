@@ -1,10 +1,10 @@
----
 title: hello world yii 2.0
+tags:
+  - web
+categories:
+  - Yii Framework
 date: 2018-09-07 23:09:29
-tags: [web]
-categories: [Yii Framework]
 ---
-
 Langkah pertama adalah dengan membuat sebuah file dengan nama HelloController.php pada direktori controllers. File ini berisi class HelloController (nama kelas harus sama dengan nama file). Berikut blok kode lengkap file HelloController.php
 
 {% codeblock HelloController.php lang:php %}
