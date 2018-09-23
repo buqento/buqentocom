@@ -5,19 +5,19 @@
   
   <title>virtual host pada xampp di windows | Programmer Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Menambahkan domain baruBuka direktori C:\Windows\System32\drivers\etc, kemudian tambahkan domain baru file “hosts” menggunakan notepad. host123...127.0.0.1   frontend.vms... Menambahkan data virtual h">
+  <meta name="description" content="Menambahkan domain baruBuka direktori C:\Windows\System32\drivers\etc, kemudian buka “hosts” menggunakan editor (notepad atau yang lainnya). Tambahkan domain baru dengan menambahkan perintah berikut.">
 <meta name="keywords" content="web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="virtual host pada xampp di windows">
 <meta property="og:url" content="http://buqento.com/2018/09/23/virtual-host-pada-xampp-di-windows/index.html">
 <meta property="og:site_name" content="Programmer Notes">
-<meta property="og:description" content="Menambahkan domain baruBuka direktori C:\Windows\System32\drivers\etc, kemudian tambahkan domain baru file “hosts” menggunakan notepad. host123...127.0.0.1   frontend.vms... Menambahkan data virtual h">
+<meta property="og:description" content="Menambahkan domain baruBuka direktori C:\Windows\System32\drivers\etc, kemudian buka “hosts” menggunakan editor (notepad atau yang lainnya). Tambahkan domain baru dengan menambahkan perintah berikut.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://buqento.com/2018/09/23/virtual-host-pada-xampp-di-windows/uji.jpg">
-<meta property="og:updated_time" content="2018-09-23T01:32:14.000Z">
+<meta property="og:updated_time" content="2018-09-23T03:53:38.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="virtual host pada xampp di windows">
-<meta name="twitter:description" content="Menambahkan domain baruBuka direktori C:\Windows\System32\drivers\etc, kemudian tambahkan domain baru file “hosts” menggunakan notepad. host123...127.0.0.1   frontend.vms... Menambahkan data virtual h">
+<meta name="twitter:description" content="Menambahkan domain baruBuka direktori C:\Windows\System32\drivers\etc, kemudian buka “hosts” menggunakan editor (notepad atau yang lainnya). Tambahkan domain baru dengan menambahkan perintah berikut.">
 <meta name="twitter:image" content="http://buqento.com/2018/09/23/virtual-host-pada-xampp-di-windows/uji.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Programmer Notes" type="application/atom+xml">
@@ -107,13 +107,14 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Menambahkan-domain-baru"><a href="#Menambahkan-domain-baru" class="headerlink" title="Menambahkan domain baru"></a>Menambahkan domain baru</h2><p>Buka direktori C:\Windows\System32\drivers\etc, kemudian tambahkan domain baru file “hosts” menggunakan notepad.</p>
+        <h2 id="Menambahkan-domain-baru"><a href="#Menambahkan-domain-baru" class="headerlink" title="Menambahkan domain baru"></a>Menambahkan domain baru</h2><p>Buka direktori C:\Windows\System32\drivers\etc, kemudian buka “hosts” menggunakan editor (notepad atau yang lainnya). Tambahkan domain baru dengan menambahkan perintah berikut.</p>
 <figure class="highlight plain"><figcaption><span>host</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">127.0.0.1   frontend.vms</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<h2 id="Menambahkan-data-virtual-host"><a href="#Menambahkan-data-virtual-host" class="headerlink" title="Menambahkan data virtual host"></a>Menambahkan data virtual host</h2><p>Buka direktori C:\xampp\apache\conf\extra, kemudian dengan menggunakan notepad tambahkan perintah berikut:</p>
-<figure class="highlight plain"><figcaption><span>httpd-vhosts.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerName frontend.vms</span><br><span class="line">    DocumentRoot &quot;C:/xampp/htdocs/vms/frontend/web/&quot;</span><br><span class="line">    </span><br><span class="line">    &lt;Directory &quot;C:/xampp/htdocs/vms/frontend/web/&quot;&gt;</span><br><span class="line">        RewriteEngine on</span><br><span class="line">        RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">        RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">        RewriteRule . index.php</span><br><span class="line">        DirectoryIndex index.php</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<h2 id="Uji-coba"><a href="#Uji-coba" class="headerlink" title="Uji coba"></a>Uji coba</h2><p>Jalankan apache service melalui XAMPP Control Panel. Kemudian buka web browser dengan mengetikan alamat Virtual Host yang telah dibuat yaitu frontend.vms</p>
+<a id="more"></a>
+<h2 id="Menambahkan-data-virtual-host"><a href="#Menambahkan-data-virtual-host" class="headerlink" title="Menambahkan data virtual host"></a>Menambahkan data virtual host</h2><p>Langkah selanjutnya adalah menambahkan virtual host. Buka direktori C:\xampp\apache\conf\extra. Kemudian buka file httpd-vhosts.conf dengan notepad. Tambahkan virtual host baru seperti blok kode berikut.</p>
+<figure class="highlight plain"><figcaption><span>httpd-vhosts.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerName frontend.vms</span><br><span class="line">    DocumentRoot &quot;C:/xampp/htdocs/vms/frontend/web/&quot;</span><br><span class="line">    &lt;Directory &quot;C:/xampp/htdocs/vms/frontend/web/&quot;&gt;</span><br><span class="line">        RewriteEngine on</span><br><span class="line">        RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">        RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">        RewriteRule . index.php</span><br><span class="line">        DirectoryIndex index.php</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>Pada contoh ini, nama virtual host adalah frontend.vms, dengan document root C:/xampp/htdocs/vms/frontend/web/.</p>
+<h2 id="Uji-coba"><a href="#Uji-coba" class="headerlink" title="Uji coba"></a>Uji coba</h2><p>Untuk melakukan uji coba, jalankan apache service melalui XAMPP control panel. Kemudian buka web browser (mozila atau google chrome) dengan mengetikan alamat virtual host (frontend.vms) yang telah dibuat.</p>
 <img src="/2018/09/23/virtual-host-pada-xampp-di-windows/uji.jpg" title="Virtual host">
-
       
     </div>
 
@@ -244,7 +245,7 @@
   <script>
     var disqus_shortname = 'buqento';
     
-    var disqus_url = 'http://buqento.com/2018/09/07/hello-world-yii-2-0/';
+    var disqus_url = 'http://buqento.com/2018/09/23/virtual-host-pada-xampp-di-windows/';
     
     (function(){
       var dsq = document.createElement('script');

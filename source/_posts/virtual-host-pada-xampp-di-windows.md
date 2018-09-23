@@ -4,8 +4,8 @@ date: 2018-09-23 08:00:10
 tags: [web]
 ---
 
-## Menambahkan domain baru
-Buka direktori C:\Windows\System32\drivers\etc, kemudian tambahkan domain baru file "hosts" menggunakan notepad.
+## Data domain
+Sebagai contoh nama domain yang akan dibuat adalah frontend.vms. Untuk menambahkan domain baru tersebut, buka direktori C:\Windows\System32\drivers\etc, kemudian buka file "hosts" menggunakan text editor (notepad atau yang lainnya). Tambahkan perintah seperti pada blok kode berikut.
 
 {% codeblock host %}
 ...
@@ -14,15 +14,14 @@ Buka direktori C:\Windows\System32\drivers\etc, kemudian tambahkan domain baru f
 {% endcodeblock %}
 
 <!-- more -->
-## Menambahkan data virtual host
-Buka direktori C:\xampp\apache\conf\extra, kemudian dengan menggunakan notepad tambahkan perintah berikut:
+## Data virtual host
+Langkah selanjutnya adalah menambahkan virtual host. Buka direktori C:\xampp\apache\conf\extra. Kemudian buka file httpd-vhosts.conf menggunakan text editor. Tambahkan virtual host baru seperti pada blok kode berikut.
 
 {% codeblock httpd-vhosts.conf %}
 ...
 <VirtualHost *:80>
     ServerName frontend.vms
     DocumentRoot "C:/xampp/htdocs/vms/frontend/web/"
-    
     <Directory "C:/xampp/htdocs/vms/frontend/web/">
         RewriteEngine on
         RewriteCond %{REQUEST_FILENAME} !-f
@@ -35,7 +34,9 @@ Buka direktori C:\xampp\apache\conf\extra, kemudian dengan menggunakan notepad t
 ...
 {% endcodeblock %}
 
+Perhatikan pada bagian ServerName dan DocumentRoot. ServerName bernilai nama domain. DocumentRoot bernilai direct ke direktori web, yaitu C:/xampp/htdocs/vms/frontend/web/.
+
 ## Uji coba
-Jalankan apache service melalui XAMPP Control Panel. Kemudian buka web browser dengan mengetikan alamat Virtual Host yang telah dibuat yaitu frontend.vms
+Untuk melakukan uji coba, jalankan apache service melalui XAMPP control panel. Kemudian buka web browser (mozila atau google chrome) dengan mengetikan alamat virtual host http://frontend.vms.
 
 {% asset_img "uji.jpg" "Virtual host" %}
