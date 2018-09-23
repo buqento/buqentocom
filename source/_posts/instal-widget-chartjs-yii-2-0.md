@@ -12,6 +12,7 @@ Ada dua cara menginstal widget chartjs melalui composer. Cara pertama yaitu menj
 composer require 2amigos/yii2-chartjs-widget:~2.0
 {% endcodeblock %}
 
+<!-- more -->
 Cara kedua, yaitu menambahkan perintah di bawah ini pada bagian require di file composer.json pada aplikasi. Kemudian melakukan update composer.
 
 {% codeblock composer.json %}
