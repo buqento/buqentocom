@@ -13,6 +13,7 @@ Buka direktori C:\Windows\System32\drivers\etc, kemudian tambahkan domain baru f
 ...
 {% endcodeblock %}
 
+<!-- more -->
 ## Menambahkan data virtual host
 Buka direktori C:\xampp\apache\conf\extra, kemudian dengan menggunakan notepad tambahkan perintah berikut:
 
