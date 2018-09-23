@@ -76,6 +76,68 @@
         <div class="col-sm-8 blog-main">
           
   
+    <article id="post-virtual-host-pada-xampp-di-windows" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/23/virtual-host-pada-xampp-di-windows/">virtual host pada xampp di windows</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2018/09/23/virtual-host-pada-xampp-di-windows/" class="article-date"><time datetime="2018-09-23T01:00:10.000Z" itemprop="datePublished">2018-09-23</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Menambahkan-domain-baru"><a href="#Menambahkan-domain-baru" class="headerlink" title="Menambahkan domain baru"></a>Menambahkan domain baru</h2><p>Buka direktori C:\Windows\System32\drivers\etc, kemudian tambahkan domain baru file “hosts” menggunakan notepad.</p>
+<figure class="highlight plain"><figcaption><span>host</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">127.0.0.1   frontend.vms</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h2 id="Menambahkan-data-virtual-host"><a href="#Menambahkan-data-virtual-host" class="headerlink" title="Menambahkan data virtual host"></a>Menambahkan data virtual host</h2><p>Buka direktori C:\xampp\apache\conf\extra, kemudian dengan menggunakan notepad tambahkan perintah berikut:</p>
+<figure class="highlight plain"><figcaption><span>httpd-vhosts.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerName frontend.vms</span><br><span class="line">    DocumentRoot &quot;C:/xampp/htdocs/vms/frontend/web/&quot;</span><br><span class="line">    </span><br><span class="line">    &lt;Directory &quot;C:/xampp/htdocs/vms/frontend/web/&quot;&gt;</span><br><span class="line">        RewriteEngine on</span><br><span class="line">        RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">        RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">        RewriteRule . index.php</span><br><span class="line">        DirectoryIndex index.php</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h2 id="Uji-coba"><a href="#Uji-coba" class="headerlink" title="Uji coba"></a>Uji coba</h2><p>Jalankan apache service melalui XAMPP Control Panel. Kemudian buka web browser dengan mengetikan alamat Virtual Host yang telah dibuat yaitu frontend.vms</p>
+<img src="/2018/09/23/virtual-host-pada-xampp-di-windows/uji.jpg" title="Virtual host">
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://buqento.com/2018/09/23/virtual-host-pada-xampp-di-windows/" data-id="cjme6u4840000p8v37rwttmnn" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+        <a href="http://buqento.com/2018/09/23/virtual-host-pada-xampp-di-windows/#disqus_thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world-yii-2-0" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
@@ -119,7 +181,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://buqento.com/2018/09/07/hello-world-yii-2-0/" data-id="cjlug5wtq0001agv3dw59cmaq" class="article-share-link">
+      <a data-url="http://buqento.com/2018/09/07/hello-world-yii-2-0/" data-id="cjme6tkuu0000xov3rsc9s5b2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -183,7 +245,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://buqento.com/2018/09/07/login-user-dengan-database/" data-id="cjlug5wtq0005agv3kp5o2n4o" class="article-share-link">
+      <a data-url="http://buqento.com/2018/09/07/login-user-dengan-database/" data-id="cjme6tkv60005xov3j8h9qhsq" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -248,7 +310,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://buqento.com/2018/09/07/instal-yii-2-0/" data-id="cjlug5wth0000agv34r6dsu1t" class="article-share-link">
+      <a data-url="http://buqento.com/2018/09/07/instal-yii-2-0/" data-id="cjme6tkuy0001xov3ypuen5e1" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -311,7 +373,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://buqento.com/2018/09/05/membuat-blog-menggunakan-hexo-framework/" data-id="cjlug5wu00006agv3kohcv14v" class="article-share-link">
+      <a data-url="http://buqento.com/2018/09/05/membuat-blog-menggunakan-hexo-framework/" data-id="cjme6tkv60006xov3y4imu7ah" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -373,7 +435,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://buqento.com/2018/09/05/langkah-cepat-menginstal-phalcon-framework/" data-id="cjlug5wtq0004agv307e8d3pg" class="article-share-link">
+      <a data-url="http://buqento.com/2018/09/05/langkah-cepat-menginstal-phalcon-framework/" data-id="cjme6tkv20004xov3srzsy4co" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -402,7 +464,7 @@
           
   <div class="sidebar-module sidebar-module-inset">
   <h4>About</h4>
-  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+  <p>I am sharing my experience learning,  what I have used to learn.  Let me introduce my self. I am programmer, i have no life.</p>
 
 </div>
 
@@ -418,7 +480,7 @@
   
   <div class="sidebar-module">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/web/">web</a><span class="sidebar-module-list-count">5</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/web/">web</a><span class="sidebar-module-list-count">6</span></li></ul>
   </div>
 
 
@@ -435,7 +497,7 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/09/">September 2018</a><span class="sidebar-module-list-count">5</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2018/09/">September 2018</a><span class="sidebar-module-list-count">6</span></li></ul>
   </div>
 
 
@@ -444,6 +506,10 @@
   <div class="sidebar-module">
     <h4>Recents</h4>
     <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2018/09/23/virtual-host-pada-xampp-di-windows/">virtual host pada xampp di windows</a>
+        </li>
       
         <li>
           <a href="/2018/09/07/hello-world-yii-2-0/">hello world yii 2.0</a>
@@ -459,10 +525,6 @@
       
         <li>
           <a href="/2018/09/05/membuat-blog-menggunakan-hexo-framework/">membuat blog menggunakan hexo framework</a>
-        </li>
-      
-        <li>
-          <a href="/2018/09/05/langkah-cepat-menginstal-phalcon-framework/">langkah cepat menginstal phalcon framework</a>
         </li>
       
     </ul>
