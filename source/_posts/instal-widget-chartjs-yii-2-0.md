@@ -26,13 +26,13 @@ Cara kedua, yaitu menambahkan perintah di bawah ini pada bagian require di file 
 {% endcodeblock %}
 
 ## Menampilkan di view
-Blok kode di bawah ini adalah contoh untuk menampilkan line chart pada view file index.php menggunakan data dummy.
+Blok kode di bawah ini adalah contoh untuk menampilkan bar chart pada view file index.php menggunakan data dummy.
 
 {% codeblock index.php lang:php %}
 use dosamigos\chartjs\ChartJs;
 
 <?= ChartJs::widget([
-    'type' => 'line',
+    'type' => 'bar',
     'options' => [
         'height' => 400,
         'width' => 400
