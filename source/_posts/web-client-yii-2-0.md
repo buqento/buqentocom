@@ -13,7 +13,7 @@ composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 
 ## Create model
 
-Buat tabel dengan menggunakan struktur tabel berikut. Contoh berikut dengan nama tabel "alarm".
+Pada latihan ini kita akan membuat tabel baru dengan nama "alarm". Struktur tabel seperti blok kode berikut.
 
 {% codeblock %}
 CREATE TABLE "public"."alarm" (
@@ -24,7 +24,7 @@ CREATE TABLE "public"."alarm" (
 )
 {% endcodeblock %}
 
-Gunakan GII untuk menggenerate model dari tabel "alarm" yang telah dibuat.
+Gunakan generator GII untuk membuat model dari tabel "alarm" yang telah dibuat di atas.
 
 {% asset_img "Capture1.PNG" "Generate model alarm" %}
 
@@ -39,7 +39,7 @@ php composer.phar require --prefer-dist yiisoft/yii2-httpclient
 
 ## Controller
 
-controllers\AlarmController.php
+Buatlah sebuah controller baru dengan nama "AlarmController.php" pada direktori controllers.
 
 {% codeblock AlarmController.php lang:php %}
 <?php
@@ -53,7 +53,7 @@ public function actionIndex()
 {
     $client = new Client();
     $response = $client->createRequest()
-        ->setUrl('http://localhost/yiiapi/web/index.php/absensis')
+        ->setUrl('http://localhost/yiiapi/web/index.php/alarms')
         ->addHeaders(['content-type' => 'application/json'])
         ->send();
     $data = Json::decode($response->content);
@@ -73,7 +73,7 @@ public function actionIndex()
 
 ## View
 
-views\alarm\index.php
+Buat juga sebuah file view baru "index.php" pada direktori views\alarm\
 
 {% codeblock index.php lang:php %}
 ...
