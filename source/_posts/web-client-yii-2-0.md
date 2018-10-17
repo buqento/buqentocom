@@ -35,6 +35,8 @@ Gunakan GII untuk menggenerate model dari tabel "alarm" yang telah dibuat.
 php composer.phar require --prefer-dist yiisoft/yii2-httpclient
 {% endcodeblock %}
 
+<!-- more -->
+
 ## Controller
 
 controllers\AlarmController.php
@@ -68,7 +70,6 @@ public function actionIndex()
 ...
 
 {% endcodeblock %}
-<!-- more -->
 
 ## View
 
