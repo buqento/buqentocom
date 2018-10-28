@@ -58,8 +58,19 @@ class UserAdmin extends \yii\db\ActiveRecord implements \yii\web\IdentityInterfa
         return self::findOne(['username' => $username]);
     }
 
-    public function validatePassword($password){
-        return $this->password === $password;
+    public function validatePassword($password)
+    {
+        return Yii::$app->security->validatePassword($password, $this->password);
+    }
+
+    public function setPassword($password)
+    {
+        return Yii::$app->security->generatePasswordHash($password);
+    }
+
+    public function generateAuthKey()
+    {
+        return Yii::$app->security->generateRandomString();
     }
     ...
 }
