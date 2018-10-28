@@ -5,7 +5,7 @@ tags: [web]
 categories: [Yii Framework]
 ---
 
-Asumsi bahwa terdapat tiga tabel, yaitu: jemaat, sektor dan unit. Stuktur masing-masing tabel dapat dilihat pada blok kode berikut.
+Dependent dropdown yang dimaksudkan adalah metode untuk merelasikan (saling bergantung) beberapa dropdown. Asumsi bahwa terdapat tiga tabel, yaitu: jemaat, sektor dan unit. Struktur masing-masing tabel dapat dilihat pada blok kode berikut.
 
 {% codeblock %}
 CREATE TABLE `jemaat`  (
@@ -77,7 +77,7 @@ public static function getSektorList($jemaat_id)
 }
 {% endcodeblock %}
 
-### view _form
+### view
 
 Kemudian pada view _form tambahkan baris kode berikut.
 
