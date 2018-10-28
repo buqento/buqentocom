@@ -7,27 +7,27 @@ categories: [Yii Framework]
 
 Fungsi login secara umum adalah salah satu bagian terpenting pada setiap aplikasi. Tutorial ini akan menjelaskan langkah-langkah membuat fungsi login dengan menggunakan model user basic yang ada pada yii framework.
 
-## Membuat tabel
+### Membuat tabel
 Buatlah sebuah tabel dengan nama user_admin. Saran saya agar tidak memberi nama tabel (user), karena nanti akan terbentur dengan user model bawaan yii. Struktur tabel user_admin dapat mengikuti blok kode di bawah:
 
 {% codeblock %}
-CREATE TABLE `user_admin` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `first_name` varchar(15) DEFAULT NULL,
-  `last_name` varchar(20) DEFAULT NULL,
-  `username` varchar(30) DEFAULT NULL,
-  `password` varchar(30) DEFAULT NULL,
-  `auth_key` char(50) DEFAULT NULL
-) 
+CREATE TABLE `user_admin`  (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `username` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `password` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `authKey` char(64) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `created` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
+  PRIMARY KEY (`id`) USING BTREE
+)
 {% endcodeblock %}
 
 <!-- more -->
-## Generate model
+### Generate model
 Langkah selanjutnya adalah membuat model. Anda dapat menggunakan generator GII untuk membuat model. Atau dengan cara menambahkan sebuah file dengan nama UserAdmin.php pada direktori /models
 
 {% asset_img "model.png" "Generate UserAdmin model menggunakan GII" %}
 
-## Menambahkan fungsi
+### Menambahkan fungsi
 Tambahkan implements \yii\web\IdentityInterface pada class UserAdmin. Tambahkan juga beberapa fungsi pada model tersebut seperti kode blok di bawah:
 
 {% codeblock lang:php UserAdmin.php %}
@@ -78,9 +78,9 @@ Ubah baris kode pada model LoginForm yang ada pada direktori \models\LoginForm.p
     ...
 {% endcodeblock %}
 
-## Konfigurasi Component 
+### Konfigurasi Component 
 
-Langkah selanjutnya adalah mengubah baris kode pada file \config\web.php.
+Langkah selanjutnya adalah mengubah parameter user component pada file \config\web.php.
 
 {% codeblock lang:php web.php %}
 'user' => [
@@ -90,5 +90,25 @@ Langkah selanjutnya adalah mengubah baris kode pada file \config\web.php.
 ],
 {% endcodeblock %}
 
-## Referensi
+Tambahkan parameter dibawah ini untuk memfilter user sesi login saat aplikasi dijalankan.
+{% codeblock lang:php web.php %}
+'as beforeRequest' => [
+    'class' => 'yii\filters\AccessControl',
+    'rules' => [
+        [
+            'allow' => true,
+            'actions' => ['login'],
+        ],
+        [
+            'allow' => true,
+            'roles' => ['@'],
+        ],
+    ],
+    'denyCallback' => function () {
+        return Yii::$app->response->redirect(['site/login']);
+    },
+],
+{% endcodeblock %}
+
+### Referensi
 {% youtube O7oEl7TUqtA %}
