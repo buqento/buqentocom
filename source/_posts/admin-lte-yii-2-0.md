@@ -5,8 +5,15 @@ tags: [web]
 categories: [Yii Framework]
 ---
 
-C:\xampp\htdocs\klasisambon>composer require dmstr/yii2-adminlte-asset "^2.1"
+### instal admin lte
 
+composer require dmstr/yii2-adminlte-asset "^2.1"
+
+### konfigurasi
+
+Tambahkan konfigurasi berikut pada file web.php pada direktori \config.
+
+{% codeblock web.php lang:php %}
 'components' => [
     'view' => [
          'theme' => [
@@ -16,7 +23,11 @@ C:\xampp\htdocs\klasisambon>composer require dmstr/yii2-adminlte-asset "^2.1"
          ],
     ],
 ],
+{% endcodeblock %}
+<!-- more -->
+### mengatur skin
+Untuk mengatur warna skin, dapat mengubah parameter class body pada file main.php pada direktori vendor\dmstr\yii2-adminlte-asset\exmple-views\yiisoft\yii2-app\layouts\
 
-vendor\dmstr\yii2-adminlte-asset\exmple-views\yiisoft\yii2-app\layouts\main.php
-
+{% codeblock main.php lang:php %}
 <body class="hold-transition skin-yellow sidebar-mini">
+{% endcodeblock %}
