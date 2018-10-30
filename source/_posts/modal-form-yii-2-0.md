@@ -5,6 +5,10 @@ tags: [web]
 categories: [Yii Framework]
 ---
 
+Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+
+{% asset_img "Capture.PNG" "Modal form" %}
+
 ### view
 
 {% codeblock index.php lang:php %}
